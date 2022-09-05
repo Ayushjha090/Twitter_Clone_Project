@@ -3,6 +3,11 @@ const express = require('express');
 
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views', './views');
+
+app.use('/', require('./routes'));
+
 const port = process.env.PORT;
 app.listen(port, (err)=>{
     if(err){
