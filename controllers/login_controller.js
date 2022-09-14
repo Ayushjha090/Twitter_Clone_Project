@@ -4,4 +4,6 @@ module.exports.login = (req, res)=>{
     });
 }
 
-
+module.exports.createSession = (req, res)=>{
+    return res.redirect('/');
+}
