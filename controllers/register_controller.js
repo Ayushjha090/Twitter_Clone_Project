@@ -4,6 +4,10 @@ const {randomUUID} = require('crypto');
 const db = require('../config/dbConfig');
 
 module.exports.signUp = (req, res)=>{
+    if(req.isAuthenticated()){
+        return res.redirect('back');
+    }
+    
     res.render('sign_up', {
         title: 'Twitter | Sign Up',
     });
