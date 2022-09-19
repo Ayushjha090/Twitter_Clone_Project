@@ -9,5 +9,7 @@ router.get('/',  passport.checkAuthentication, homeController.home);
 router.use('/login', require('./login_route'));
 // Route for signup page
 router.use('/register', require('./register_route'));
+// Router for signout page
+router.use('/logout', require('./logout_route'));
 
 module.exports = router;
